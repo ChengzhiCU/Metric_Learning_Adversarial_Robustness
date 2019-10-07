@@ -1,4 +1,4 @@
-# TLA: Triplet Loss for Adversarial Robustness
+# TLA(Triplet Loss for Adversarial Robustness)
 
 ## Requirement
 Install tensorflow:    
