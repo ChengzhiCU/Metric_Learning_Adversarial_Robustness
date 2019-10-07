@@ -1,6 +1,6 @@
-#TLA: Triplet Loss for Adversarial Robustness
+# TLA: Triplet Loss for Adversarial Robustness
 
-##Requirement
+## Requirement
 Install tensorflow:    
 
 pip install tensorflow-gpu
@@ -9,15 +9,15 @@ pip install tensorflow-gpu
 All of our experiments are conducted on Amazon AWS EC2 server, with pre-installed tensorflow on the V100 GPU.
 If you use AWS server, can activate the conda environment: source activate tensorflow_p36
 
-##MNIST
+## MNIST
 
-###Prepare MNIST dataset
+### Prepare MNIST dataset
 
 run
 
 `python utils_folder/save_mnist.py`
 
-###Running experiemnts
+### Running experiemnts
 
 All the hyper parameters are set up in `config_mnist.json`
 
@@ -36,7 +36,7 @@ Madry et al's   `python train_at_madry.py`
 
 Note that this TLA algorithm takes almost the same time as Madry's baseline to converge, thus patience is needed.
 
-###Evaluations
+### Evaluations
 
 First, set the path to the directory where the MNIST model is saved. Set up the attack type, the 
 steps, the step size, and random start.
@@ -44,14 +44,14 @@ steps, the step size, and random start.
 Then run `python eval.py` to evaluate the model under certain attack
 
 
-##CIFAR-10
+## CIFAR-10
 
 
-###Prepare CIFAR-10 dataset
+### Prepare CIFAR-10 dataset
 Download the data from https://github.com/MadryLab/cifar10_challenge/tree/master/cifar10_data into the 
 folder cifar10_data
 
-###Running experiemnts
+### Running experiemnts
 
 All the hyper parameters are set up in `config_cifar.json`
 
@@ -68,16 +68,16 @@ Madry et al's   `python train_at_madry.py --dataset cifar10`
 
 
 
-###Evaluations
+### Evaluations
 
 First update the path to the saved CIFAR10 model. Set up the attack type, the 
 steps, the step size, and random start.
 
 Then run `python eval.py` to evaluate the saved model under the given attack.
 
-##Tiny ImageNet
+## Tiny ImageNet
 
-###Prepare Tiny ImageNet dataset
+### Prepare Tiny ImageNet dataset
 
 Switch to python2.7 version of tensorflow (source activate tensorflow_p27 on EC2 server).
 
@@ -85,10 +85,10 @@ Download dataset: https://tiny-imagenet.herokuapp.com to subfolder imagenet_data
 
 run `python utils_folder/save_imagenet.py` to produce preprocessed dataset.
 
-###Running experiemnts
+### Running experiemnts
 
 
-####Finetuning version
+#### Finetuning version
 We have Res20 and Res50 architecture option.
 
 set up the config_imagenet.json
