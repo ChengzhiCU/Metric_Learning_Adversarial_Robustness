@@ -110,12 +110,16 @@ We have Res20 and Res50 architecture option.
 set up the config_imagenet.json
 
 first run 
-```python train_at_madry.py --dataset imagenet```
+```
+python train_at_madry.py --dataset imagenet
+```
 
 
 Then set up the finetuning model path in config_imagenet.json, and 
 run 
-```python train_update_fast_triplet.py --dataset imagenet --diff_neg```
+```
+python train_update_fast_triplet.py --dataset imagenet --diff_neg
+```
 
 
 ###Evaluations
