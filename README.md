@@ -4,7 +4,7 @@
 Install tensorflow:    
 
 ```
-pip install tensorflow-gpu
+pip install -r requirement.txt
 ```
 
 
