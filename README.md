@@ -122,7 +122,7 @@ python train_update_fast_triplet.py --dataset imagenet --diff_neg
 ```
 
 
-###Evaluations
+### Evaluations
 
 First update the path to the saved ImageNet model. Set up the attack type, the 
 steps, the step size, and random start.
