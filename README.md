@@ -1,9 +1,11 @@
-# TLA(Triplet Loss for Adversarial Robustness)
+# Metric Learning for Adversarial Robustness
 
 ## Requirement
 Install tensorflow:    
 
+```
 pip install tensorflow-gpu
+```
 
 
 All of our experiments are conducted on Amazon AWS EC2 server, with pre-installed tensorflow on the V100 GPU.
@@ -15,7 +17,9 @@ If you use AWS server, can activate the conda environment: source activate tenso
 
 run
 
-`python utils_folder/save_mnist.py`
+```
+python utils_folder/save_mnist.py
+```
 
 ### Running experiemnts
 
@@ -23,16 +27,19 @@ All the hyper parameters are set up in `config_mnist.json`
 
 Then run:
 
-`python train_update_fast_triplet.py`
+```
+python train_update_fast_triplet.py
+```
 
 To reproduce the ATL algorithm
 
 
 For baseline models:
 
-Madry et al's   `python train_at_madry.py`
-
-
+Madry et al's   
+```
+python train_at_madry.py
+```
 
 Note that this TLA algorithm takes almost the same time as Madry's baseline to converge, thus patience is needed.
 
@@ -57,14 +64,19 @@ All the hyper parameters are set up in `config_cifar.json`
 
 Then run:
 
-`python train_update_fast_triplet.py --dataset cifar10`
+```
+python train_update_fast_triplet.py --dataset cifar10
+```
 
 To reproduce the ATL algorithm
 
 
 For baseline models:
 
-Madry et al's   `python train_at_madry.py --dataset cifar10`
+Madry et al's   
+```
+python train_at_madry.py --dataset cifar10
+```
 
 
 
@@ -83,7 +95,11 @@ Switch to python2.7 version of tensorflow (source activate tensorflow_p27 on EC2
 
 Download dataset: https://tiny-imagenet.herokuapp.com to subfolder imagenet_data
 
-run `python utils_folder/save_imagenet.py` to produce preprocessed dataset.
+run 
+```
+python utils_folder/save_imagenet.py
+``` 
+to produce preprocessed dataset.
 
 ### Running experiemnts
 
@@ -93,11 +109,13 @@ We have Res20 and Res50 architecture option.
 
 set up the config_imagenet.json
 
-first run `python train_at_madry.py --dataset imagenet`
+first run 
+```python train_at_madry.py --dataset imagenet```
 
 
 Then set up the finetuning model path in config_imagenet.json, and 
-run `python train_update_fast_triplet.py --dataset imagenet --diff_neg`
+run 
+```python train_update_fast_triplet.py --dataset imagenet --diff_neg```
 
 
 ###Evaluations
